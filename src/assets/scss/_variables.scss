@@ -7,7 +7,6 @@
 //Add fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
 // The font size set on the root html element.
 $base-font-size: 16px !default;
 
@@ -18,12 +17,11 @@ $base-line-height: 24px !default;
 // Supported values: px, em, rem.
 $base-unit: 'em' !default;
 
-
 // The font sizes for h1-h6.
-$h1-font-size: 2    * $base-font-size !default;
-$h2-font-size: 1.5  * $base-font-size !default;
+$h1-font-size: 2 * $base-font-size !default;
+$h2-font-size: 1.5 * $base-font-size !default;
 $h3-font-size: 1.17 * $base-font-size !default;
-$h4-font-size: 1    * $base-font-size !default;
+$h4-font-size: 1 * $base-font-size !default;
 $h5-font-size: 0.83 * $base-font-size !default;
 $h6-font-size: 0.67 * $base-font-size !default;
 
@@ -39,47 +37,46 @@ $indent-amount: 40px !default;
 $normalize-vertical-rhythm: null !default;
 
 //Colors
-$primary: #EB5440;
-$secondary: #4A4B4C;
-$tertiary-1: #E8E8E8;
-$tertiary-2: #C3C3C3;
-$background-1: #F6F6F6;
-$background-2: #FFFFFF;
+$primary: #eb5440;
+$secondary: #4a4b4c;
+$tertiary-1: #e8e8e8;
+$tertiary-2: #c3c3c3;
+$background-1: #f6f6f6;
+$background-2: #ffffff;
 $primary-text: #000000;
-$secondary-text: #4A4B4C;
-$hyperlink: #067BC2;
+$secondary-text: #4a4b4c;
+$hyperlink: #067bc2;
 
 //Typography
-$base-font-family: "Montserrat", sans-serif, Helvetica, Arial, sans-serif !default;
+$base-font-family: 'Montserrat', sans-serif, Helvetica, Arial, sans-serif !default;
 $base-font-weight: 400;
 $bold-font-weight: 700;
 $semibold-font-weight: 600;
 $medium-font-weight: 500;
 $italic-font-style: italic;
 
-$font-family-open: "Open Sans", sans-serif;
+$font-family-open: 'Open Sans', sans-serif;
 $semibold-font-weight: 600;
 $regular-font-weight: 400;
 
-$h1-font-size-desktop: '32px';
-$h1-font-size-mobile: '18px';
-$h2-font-size-desktop: '22px';
-$h2-font-size-mobile: '14px';
-$font-size-desktop-header-active-menu : '18px';
-$button-font-size-desktop: '18px';
-$button-font-size-mobile: '12px';
-$black-button-label-font-size-desktop: '16px';
-$input-field-title-font-size-desktop: '14px';
-$input-field-title-font-size-mobile: '12px';
-$desktop-header-inactive-menu-font-size: '18px';
-$empty-state-message-font-size-desktop: '18px';
-$empty-state-message-font-size-mobile: '14px';
-$error-message-font-size-desktop: '14px';
-$error-message-font-size-mobile: '12px';
-$listing-information-font-size-desktop: '16px';
-$listing-information-font-size-mobile: '12px';
-$body-text-font-size-desktop: '18px';
-$body-text-font-size-mobile: '12px';
-$input-field-title-font-size-desktop: '14px';
-$input-field-title-font-size-mobile: '12px';
-
+$h1-font-size-desktop: 32px;
+$h1-font-size-mobile: 18px;
+$h2-font-size-desktop: 22px;
+$h2-font-size-mobile: 14px;
+$font-size-desktop-header-active-menu: 18px;
+$button-font-size-desktop: 18px;
+$button-font-size-mobile: 12px;
+$black-button-label-font-size-desktop: 16px;
+$input-field-title-font-size-desktop: 14px;
+$input-field-title-font-size-mobile: 12px;
+$desktop-header-inactive-menu-font-size: 18px;
+$empty-state-message-font-size-desktop: 18px;
+$empty-state-message-font-size-mobile: 14px;
+$error-message-font-size-desktop: 14px;
+$error-message-font-size-mobile: 12px;
+$listing-information-font-size-desktop: 16px;
+$listing-information-font-size-mobile: 12px;
+$body-text-font-size-desktop: 18px;
+$body-text-font-size-mobile: 12px;
+$input-field-title-font-size-desktop: 14px;
+$input-field-title-font-size-mobile: 12px;
