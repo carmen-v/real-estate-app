@@ -1,0 +1,68 @@
+.house-card {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  background-color: $background-2;
+  border-radius: 5px;
+  padding: 12px;
+  box-shadow: 0 0 3px 3px rgba(195, 195, 195, 0.1);
+  margin-bottom: 20px;
+  align-content: center;
+  max-width: 80vw;
+  @media (max-width: 1024px) {
+    max-width: 90vw;
+  }
+}
+
+img.house-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: left;
+  @media (max-width: 1024px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.house-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0;
+  font-family: $font-family-open;
+  @media (max-width: 1024px) {
+    gap: 5px;
+    padding: 10px;
+  }
+  h2 {
+    margin: 0;
+    font-size: $h2-font-size-desktop;
+    text-transform: capitalize;
+    @media (max-width: 1024px) {
+      font-size: $h2-font-size-mobile;
+    }
+  }
+  span {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    &:first-of-type {
+      font-weight: $semibold-font-weight;
+    }
+    &:not(:last-of-type):not(:first-of-type) {
+      color: $secondary-text;
+    }
+    img {
+      width: 16px;
+      height: 16px;
+    }
+    &:last-of-type {
+      @media (max-width: 1024px) {
+        padding-top: 10px;
+      }
+    }
+  }
+}
