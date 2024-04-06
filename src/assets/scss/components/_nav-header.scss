@@ -1,0 +1,36 @@
+.container {
+  align-items: center;
+  background-color: $background-2;
+  box-shadow: $tertiary-2 0 1px 4px;
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  padding: 20px 10vw;
+  width: 100%;
+  .branding {
+    img {
+      width: 100px;
+    }
+  }
+  .nav-routes {
+    display: flex;
+    gap: 60px;
+    margin: 0;
+    padding: 20px 0;
+    a {
+      color: $secondary-text;
+      font-weight: $medium-font-weight;
+      font-size: $font-size-desktop-header-active-menu;
+      text-decoration: none;
+    }
+    .router-link-active {
+      font-weight: $bold-font-weight;
+      color: $primary-text;
+    }
+  }
+
+  //navigation header is not visible on mobile
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
