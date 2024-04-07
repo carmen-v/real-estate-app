@@ -2,7 +2,7 @@
 import { useHouseStore } from '@/stores/houses.js'
 import { ref } from 'vue'
 
-let isActive = ref(true)
+const isActive = ref(true)
 
 const sortByPrice = () => {
   useHouseStore().sortByPrice()
