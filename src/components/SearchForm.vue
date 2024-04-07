@@ -23,7 +23,7 @@ const clearSearch = () => {
         placeholder="Search for a house"
       />
       <button @click="clearSearch" v-if="searchTerm !== ''" class="close-button">
-        <img src="@/assets/icons/ic_clear_white@3x.png" alt="clear search" />
+        <img src="@/assets/icons/ic_clear@3x.png" alt="clear search" />
       </button>
     </div>
   </form>

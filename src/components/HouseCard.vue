@@ -1,7 +1,6 @@
 <script setup>
 // eslint-disable-next-line no-unused-vars
 import HouseDetailsIcon from '@/components/HouseDetailsIcon.vue'
-import { isAny } from 'eslint-plugin-vue/lib/utils/ts-utils/typescript.js'
 
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
@@ -14,12 +13,13 @@ const props = defineProps({
     city: String,
     zip: String
   },
-  price: isAny,
+  price: Number,
   size: Number,
   rooms: {
     bedrooms: Number,
     bathrooms: Number
-  }
+  },
+  constructionYear: Number
 })
 </script>
 

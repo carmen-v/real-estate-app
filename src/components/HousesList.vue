@@ -2,39 +2,24 @@
 import HouseCard from '@/components/HouseCard.vue'
 import { computed, ref } from 'vue'
 import SearchForm from '@/components/SearchForm.vue'
+import SortButtons from '@/components/SortButtons.vue'
+import { useHouseStore } from '@/stores/houses.js'
+import NoResultsFound from '@/components/NoResultsFound.vue'
 
-const housesList = ref([])
+const housesList = useHouseStore()
 
 defineProps({
   houses: {
     type: Array,
-    required: true
+    required: false
   }
 })
-
-const fetchHouses = () => {
-  const myHeaders = new Headers()
-  myHeaders.append('X-Api-Key', '5Vkh7UIXBcZ9x8RmaMl4TSqdEzW3FJOg')
-
-  const requestOptions = {
-    method: 'GET',
-    headers: myHeaders,
-    redirect: 'follow'
-  }
-
-  fetch('https://api.intern.d-tt.nl/api/houses', requestOptions)
-    .then((response) => response.json())
-    .then((data) => (housesList.value = data))
-    .catch((error) => console.log('error', error))
-}
-
-fetchHouses()
 
 const searchFilter = ref('')
 
 const filteredHouses = computed(() => {
   if (searchFilter.value !== '') {
-    return housesList.value.filter(
+    return housesList.houses.filter(
       (house) =>
         house.price.toString() === searchFilter.value ||
         house.size.toString().includes(searchFilter.value) ||
@@ -44,7 +29,7 @@ const filteredHouses = computed(() => {
         house.constructionYear.toString().includes(searchFilter.value)
     )
   }
-  return housesList.value
+  return housesList.houses
 })
 
 const handleSearch = (searchTerm) => {
@@ -55,14 +40,14 @@ const handleSearch = (searchTerm) => {
 <template>
   <h1>Houses</h1>
   <SearchForm @search="handleSearch" />
-  <p v-if="housesList.length > filteredHouses.length">
-    Your search result: {{ filteredHouses.length }} house(s).
+  <SortButtons />
+  <p v-if="housesList.houses.length > filteredHouses.length">
+    {{ filteredHouses.length }} results found
   </p>
   <ul class="houses-list" v-if="filteredHouses.length > 0">
     <HouseCard
       :key="house.id"
       v-for="house in filteredHouses"
-      :house="house"
       :pictureURL="house.image"
       :location="house.location"
       :price="house.price"
@@ -70,8 +55,5 @@ const handleSearch = (searchTerm) => {
       :size="house.size"
     />
   </ul>
-  <p v-else>
-    You search input did not match any house. Try other search term or see our full list.
-  </p>
-  <div>{{ housesList }}</div>
+  <NoResultsFound v-else />
 </template>
