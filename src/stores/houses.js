@@ -23,5 +23,12 @@ export const useHouseStore = defineStore('houses', () => {
       })
   }
   fetchHouses()
-  return { houses, fetchHouses }
+
+  const sortByPrice = () => {
+    houses.value.sort((a, b) => a.price - b.price)
+  }
+  const sortBySize = () => {
+    houses.value.sort((a, b) => b.size - a.size)
+  }
+  return { houses, fetchHouses, sortByPrice, sortBySize }
 })
