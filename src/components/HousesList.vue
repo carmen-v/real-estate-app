@@ -45,15 +45,15 @@ const handleSearch = (searchTerm) => {
     {{ filteredHouses.length }} results found
   </p>
   <ul class="houses-list" v-if="filteredHouses.length > 0">
-    <HouseCard
-      :key="house.id"
-      v-for="house in filteredHouses"
-      :pictureURL="house.image"
-      :location="house.location"
-      :price="house.price"
-      :rooms="house.rooms"
-      :size="house.size"
-    />
+    <RouterLink :to="'/' + house.id" v-for="house in filteredHouses" :key="house.id">
+      <HouseCard
+        :pictureURL="house.image"
+        :location="house.location"
+        :price="house.price"
+        :rooms="house.rooms"
+        :size="house.size"
+      />
+    </RouterLink>
   </ul>
   <NoResultsFound v-else />
 </template>

@@ -30,5 +30,16 @@ export const useHouseStore = defineStore('houses', () => {
   const sortBySize = () => {
     houses.value.sort((a, b) => b.size - a.size)
   }
-  return { houses, fetchHouses, sortByPrice, sortBySize }
+  const deleteHouse = (id) => {
+    houses.value = houses.value.filter((house) => house.id !== id)
+  }
+  const editHouse = (id) => {
+    houses.value = houses.value.map((house) => {
+      if (house.id === id) {
+        house.madeByMe = !house.madeByMe
+      }
+      return house
+    })
+  }
+  return { houses, fetchHouses, sortByPrice, sortBySize, deleteHouse, editHouse }
 })
