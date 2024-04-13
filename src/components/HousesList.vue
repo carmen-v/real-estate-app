@@ -39,11 +39,13 @@ const handleSearch = (searchTerm) => {
 
 <template>
   <h1>Houses</h1>
-  <SearchForm @search="handleSearch" />
-  <SortButtons />
-  <p v-if="housesList.houses.length > filteredHouses.length">
-    {{ filteredHouses.length }} results found
-  </p>
+  <div class="buttons-container">
+    <SearchForm @search="handleSearch" />
+    <SortButtons />
+    <p v-if="housesList.houses.length > filteredHouses.length">
+      {{ filteredHouses.length }} results found
+    </p>
+  </div>
   <ul class="houses-list" v-if="filteredHouses.length > 0">
     <RouterLink :to="'/' + house.id" v-for="house in filteredHouses" :key="house.id">
       <HouseCard

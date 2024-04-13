@@ -19,8 +19,11 @@ const props = defineProps({
     bedrooms: Number,
     bathrooms: Number
   },
-  constructionYear: Number
+  constructionYear: Number,
+  hasGarage: Boolean
 })
+
+const formatedPrice = new Intl.NumberFormat('nl-NL').format(props.price)
 </script>
 
 <template>
@@ -28,7 +31,7 @@ const props = defineProps({
     <img :src="pictureURL" alt="House" class="house-picture" />
     <div class="house-details">
       <h2>{{ location.street }} {{ location.houseNumber }}</h2>
-      <span> € {{ price }}</span>
+      <span> € {{ formatedPrice }}</span>
       <span> {{ location.zip }} {{ location.city }}</span>
       <span>
         <HouseDetailsIcon url="src/assets/icons/ic_bed@3x.png" alt="bedroom icon" />

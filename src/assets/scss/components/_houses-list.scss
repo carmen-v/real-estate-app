@@ -6,18 +6,28 @@ main {
   background-color: $background-1;
   padding: 20px 10vw;
   max-width: 100%;
-  @media (max-width: 1024px) {
-    padding: 50px 5vw;
+  @include mobile {
+    padding: 40px 5vw;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .buttons-container {
+    @include desktop {
+      //make buttons align right
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 }
 
 h1 {
-  margin-top: 130px;
-  //change fontsize for mobile
-  @media (max-width: 1024px) {
-    font-size: $h1-font-size-mobile;
-    margin-top: unset;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+  @include header1;
+}
+
+h2 {
+  @include header2;
 }

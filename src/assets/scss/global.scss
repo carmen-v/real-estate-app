@@ -1,12 +1,15 @@
 //Normalize
 @import 'normalize';
 
+//Mixins
+@import 'mixins';
+
 //Components
 @import 'components/nav-header';
 @import 'components/houses-list';
 @import 'components/house-details-icon';
-@import "components/house-card";
-@import "components/search-form";
-@import "components/no-results-found";
-@import "components/sort-buttons";
-@import "components/detail-page";
+@import 'components/house-card';
+@import 'components/search-form';
+@import 'components/no-results-found';
+@import 'components/sort-buttons';
+@import 'components/detail-page';

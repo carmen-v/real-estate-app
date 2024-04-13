@@ -25,20 +25,24 @@
     a {
       color: $secondary-text;
       font-weight: $medium-font-weight;
-      font-size: $font-size-desktop-header-active-menu;
+      font-size: 18px;
       text-decoration: none;
+      &.active {
+        font-weight: $bold-font-weight;
+        color: $primary-text;
+      }
     }
     .router-link-active {
       font-weight: $bold-font-weight;
       color: $primary-text;
     }
-    @media (max-width: 1024px) {
+    @include mobile {
       display: none;
     }
   }
   .nav-mobile {
-    display:none;
-    @media (max-width: 1024px) {
+    display: none;
+    @include mobile {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -46,7 +50,7 @@
       margin: 0;
       padding: 20px 0;
       width: 100%;
-      img{
+      img {
         width: 30px;
         height: 30px;
       }
@@ -58,7 +62,7 @@
   }
 
   //navigation header  on mobile
-  @media (max-width: 1024px) {
+  @include mobile {
     top: unset;
     bottom: 0;
     z-index: 999;

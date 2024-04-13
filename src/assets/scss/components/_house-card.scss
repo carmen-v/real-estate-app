@@ -1,6 +1,7 @@
 a {
-    text-decoration: none;
-color: inherit}
+  text-decoration: none;
+  color: inherit;
+}
 
 .house-card {
   position: relative;
@@ -14,7 +15,7 @@ color: inherit}
   margin-bottom: 20px;
   align-content: center;
   max-width: 80vw;
-  @media (max-width: 1024px) {
+  @include mobile {
     max-width: 90vw;
   }
 }
@@ -25,7 +26,7 @@ img.house-picture {
   border-radius: 10px;
   object-fit: cover;
   object-position: left;
-  @media (max-width: 1024px) {
+  @include mobile {
     width: 100px;
     height: 100px;
   }
@@ -36,18 +37,15 @@ img.house-picture {
   flex-direction: column;
   gap: 10px;
   padding: 15px 0;
-  font-family: $font-family-open;
-  @media (max-width: 1024px) {
+  @include listing-information;
+  @include mobile {
     gap: 5px;
     padding: 10px;
   }
   h2 {
     margin: 0;
-    font-size: $h2-font-size-desktop;
     text-transform: capitalize;
-    @media (max-width: 1024px) {
-      font-size: $h2-font-size-mobile;
-    }
+    @include header2;
   }
   span {
     gap: 10px;
@@ -64,7 +62,7 @@ img.house-picture {
       height: 16px;
     }
     &:last-of-type {
-      @media (max-width: 1024px) {
+      @include mobile {
         padding-top: 10px;
       }
     }

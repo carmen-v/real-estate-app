@@ -1,26 +1,118 @@
+.back-button {
+  display: flex;
+  flex-direction: row;
+  @include mobile {
+    display: none;
+  }
+  margin-top: 120px;
+  @include button-tab;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  padding: 20px 10vw 0;
+  color: $secondary-text;
+  background-color: unset;
+  max-width: fit-content;
+  &:hover {
+    color: $primary-text;
+    cursor: pointer;
+  }
+  * {
+    margin-left: 10px;
+  }
+}
+.details-container {
+  @include desktop {
+    padding: 20px 10vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+  }
+}
 .details-page {
-  background-color: $background-1;
+  background-color: $tertiary-2;
+  .actions-container-mobile {
+    @include desktop {
+      display: none;
+    }
+    @include action-buttons;
+  }
+  .actions-container-desktop {
+    @include mobile {
+      display: none;
+    }
+    @include action-buttons;
+    gap: 50px;
+  }
   .house-details {
     background-color: $background-2;
     position: relative;
     margin-top: -100px;
-    border-radius: 10px;
-    padding: 10px;
-    span, h2 {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 15px;
+    @include listing-information;
+    span,
+    h2 {
       padding: 5px 0;
+    }
+    span {
+      *:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+    @include desktop {
+      border-radius: unset;
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        img {
+          padding: 5px;
+        }
+        button {
+          padding: unset;
+          background-color: unset;
+        }
+      }
     }
   }
 }
 .detail-picture {
   width: 100%;
-}
-.description {
-  padding: 0 5px;
+  min-height: 300px;
+  object-fit: cover;
 }
 
 .recommended-houses {
-  h2 {
-    padding: 0 5px;
-    background-color: $background-2;
+  min-width: fit-content;
+  padding: 15px;
+  background-color: $background-1;
+  @include desktop {
+    .house-card .house-picture {
+      width: 100px;
+      height: 100px;
+    }
+    .house-card {
+      padding-right: 70px;
+    }
+    .house-details {
+      padding: unset;
+      border-radius: unset;
+    }
+    padding: unset;
+    font-size: 12px;
+    span {
+      font-size: 12px;
+    }
+    h2 {
+      padding: unset;
+      margin: unset;
+      font-size: 16px;
+    }
   }
 }

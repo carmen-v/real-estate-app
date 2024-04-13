@@ -48,35 +48,14 @@ $secondary-text: #4a4b4c;
 $hyperlink: #067bc2;
 
 //Typography
-$base-font-family: 'Montserrat', sans-serif, Helvetica, Arial, sans-serif !default;
-$base-font-weight: 400;
+$primary-font-family: 'Montserrat', sans-serif, Helvetica, Arial, sans-serif !default;
+$regular-font-weight: 400;
 $bold-font-weight: 700;
 $semibold-font-weight: 600;
 $medium-font-weight: 500;
 $italic-font-style: italic;
 
-$font-family-open: 'Open Sans', sans-serif;
-$semibold-font-weight: 600;
-$regular-font-weight: 400;
+$secondary-font-family: 'Open Sans', sans-serif;
 
 $h1-font-size-desktop: 32px;
 $h1-font-size-mobile: 18px;
-$h2-font-size-desktop: 22px;
-$h2-font-size-mobile: 14px;
-$font-size-desktop-header-active-menu: 18px;
-$button-font-size-desktop: 18px;
-$button-font-size-mobile: 12px;
-$black-button-label-font-size-desktop: 16px;
-$input-field-title-font-size-desktop: 14px;
-$input-field-title-font-size-mobile: 12px;
-$desktop-header-inactive-menu-font-size: 18px;
-$empty-state-message-font-size-desktop: 18px;
-$empty-state-message-font-size-mobile: 14px;
-$error-message-font-size-desktop: 14px;
-$error-message-font-size-mobile: 12px;
-$listing-information-font-size-desktop: 16px;
-$listing-information-font-size-mobile: 12px;
-$body-text-font-size-desktop: 18px;
-$body-text-font-size-mobile: 12px;
-$input-field-title-font-size-desktop: 14px;
-$input-field-title-font-size-mobile: 12px;

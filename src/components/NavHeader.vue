@@ -16,8 +16,8 @@ const toggleMenu = () => {
         <img src="@/assets/images/img_logo_dtt@3x.png" alt="logo" />
       </div>
       <ul class="nav-routes">
-        <RouterLink to="/">Houses</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/" @click="toggleMenu" :class="{ active: isHomeActive }">Houses</RouterLink>
+        <RouterLink to="/about" @click="toggleMenu" :activeClass="isInfoActive">About</RouterLink>
       </ul>
       <ul class="nav-mobile">
         <RouterLink to="/" @click="toggleMenu">

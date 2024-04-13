@@ -3,6 +3,7 @@
 
 @import 'variables';
 @import 'vertical-rhythm';
+@import 'mixins';
 
 // If we've customized any font variables, we'll need extra properties.
 @if $normalize-vertical-rhythm ==
@@ -41,9 +42,9 @@
  */
 
 html {
-  @if $base-font-family {
+  @if $primary-font-family {
     /* Change the default font family in all browsers (opinionated). */
-    font-family: $base-font-family;
+    font-family: $primary-font-family;
   }
   @if $base-font-size != 16px or $normalize-vertical-rhythm {
     // Correct old browser bug that prevented accessible resizing of text
@@ -69,10 +70,12 @@ html {
 
 body {
   margin: 0;
-  font-family: $font-family-open;
-  font-size: $body-text-font-size-desktop;
-  @media (max-width: 1024px) {
-    font-size: $body-text-font-size-mobile;
+  font-family: $secondary-font-family;
+  font-size: 18px;
+  background-color: $background-1;
+
+  @include mobile {
+    font-size: 12px;
   }
 }
 
