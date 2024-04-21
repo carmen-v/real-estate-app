@@ -1,25 +1,7 @@
-.back-button {
-  display: flex;
-  flex-direction: row;
-  @include mobile {
-    display: none;
-  }
-  margin-top: 120px;
-  @include button-tab;
-  img {
-    width: 20px;
-    height: 20px;
-  }
-  padding: 20px 10vw 0;
-  color: $secondary-text;
-  background-color: unset;
-  max-width: fit-content;
-  &:hover {
-    color: $primary-text;
-    cursor: pointer;
-  }
-  * {
-    margin-left: 10px;
+.back-button-desktop {
+  @include back-button-desktop;
+  span {
+    @include back-button-label;
   }
 }
 .details-container {
@@ -38,6 +20,9 @@
       display: none;
     }
     @include action-buttons;
+    :first-of-type {
+      margin-right: 65vw;
+    }
   }
   .actions-container-desktop {
     @include mobile {

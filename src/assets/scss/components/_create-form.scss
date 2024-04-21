@@ -1,0 +1,93 @@
+.edit-form-separator {
+  @include separator;
+  gap: 15vw;
+  justify-content: flex-start;
+}
+form {
+  margin-top: 5vh;
+  input[required] + label:after, select + label:after, textarea + label:after  {
+    content: '*';
+    color: $primary-text;
+  }
+  div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  div input, select, textarea {
+    order: 2;
+    @include input-field;
+    background-color: $background-2;
+    padding: 10px 15px;
+    &:focus-visible {
+      background-color: $background-1;
+    }
+  }
+  div label {
+    @include input-field-title;
+    order: 1;
+  }
+  .separator {
+    @include separator;
+    gap: 15px;
+    input {
+      max-width: 33vw;
+    }
+  }
+  input[type=file] {
+    color: transparent;
+    width: 30px;
+    height: 30px;
+    background-color: unset;
+    padding: 40px 30px 30px 40px;
+    border: 3px dashed $tertiary-2;
+  }
+  input[type=file]::file-selector-button {
+    background-image: url("src/assets/icons/ic_upload@3x.png");
+    background-size: contain ;
+    width: 20px;
+    height: 20px;
+    color: transparent;
+    border: none;
+    }
+
+  button {
+    @include button-tab;
+    text-transform: uppercase;
+    width: 100%;
+    height: 28px;
+    background-color: $primary;
+  }
+
+  }
+
+.create-form {
+  margin-bottom: 6vh;
+  background-image: url("src/assets/images/img_background@3x.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto 40vh;
+  padding: 2vw;
+  background-color: $tertiary-1;
+  .caret {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 20px;
+    opacity: 0.3;
+    top: 30px;
+  }
+}
+
+select {
+  width: 40vw;
+  appearance: none;
+}
+
+textarea {
+  height: 10vh;
+}
+
+

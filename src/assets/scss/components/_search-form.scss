@@ -19,19 +19,9 @@
     @include input-field;
     display: flex;
     flex: 1 1 auto;
-    border: none;
     width: 0;
     @include desktop {
       min-width: 20vw;
-    }
-    min-height: 0;
-    padding: 10px 20px 10px 45px;
-    outline: none;
-    border-radius: 5px;
-    background-color: $tertiary-1;
-    color: $secondary-text;
-    &:focus-visible {
-      background-color: $tertiary-1;
     }
   }
 

@@ -38,7 +38,12 @@ const handleSearch = (searchTerm) => {
 </script>
 
 <template>
-  <h1>Houses</h1>
+  <div class="separator">
+    <h1>Houses</h1>
+    <button class="create-button" @click="$router.push('/create')">
+      <img src="@/assets/icons/ic_plus_grey@3x.png" alt="create icon" />
+    </button>
+  </div>
   <div class="buttons-container">
     <SearchForm @search="handleSearch" />
     <SortButtons />

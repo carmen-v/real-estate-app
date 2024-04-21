@@ -39,13 +39,16 @@ const formatedPrice = new Intl.NumberFormat('nl-NL').format(currentHouse.value[0
 </script>
 
 <template>
-  <button class="back-button" @click="$router.go(-1)">
+  <button class="back-button-desktop" @click="$router.go(-1)">
     <img src="@/assets/icons/ic_back_grey@3x.png" alt="back icon" />
     <span>Back to overview </span>
   </button>
   <div class="details-container">
     <div class="details-page" v-if="currentHouse.length > 0">
       <div class="actions-container-mobile">
+        <button @click="$router.go(-1)">
+          <img src="@/assets/icons/ic_back_white@3x.png" alt="back icon" />
+        </button>
         <button @click="editHouse(currentHouse[0].id)">
           <img
             src="@/assets/icons/ic_edit_white@3x.png"

@@ -6,6 +6,9 @@ main {
   background-color: $background-1;
   padding: 20px 10vw;
   max-width: 100%;
+  .separator {
+   @include separator
+  }
   @include mobile {
     padding: 40px 5vw;
   }
